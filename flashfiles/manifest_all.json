@@ -9,7 +9,7 @@
         { "path": "GripMeter_20231006_partitions.bin", "offset": 32768 },
         { "path": "boot_app0.bin", "offset": 57344 },
         { "path": "GripMeter_20231006.bin", "offset": 65536 }
-		{ "path": "GripMeter_20231006_spiffs.bin", "offset": 6750208 }
+        { "path": "GripMeter_20231006_spiffs.bin", "offset": 6750208 }
       ]
     }
   ]
