@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GripMeter Flashing</title> <!-- Set the web title here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        .header {
+            background-color: #F2F8FD; /* Header background color */
+            height: 100px;             /* Set the header height to 100px */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-content {
+            background-color: #F2F8FD; /* Main row background color */
+            padding: 100px;
+        }
+
+        .button-box {
+            background-color: #FCBF49; /* Main box background color (071013) */
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .button-box-text {
+            font-size: 16px;
+            color: #000814; 				/* Text color (F2F8FD) */
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            margin: 10px;
+            padding: 15px 30px;
+			width: 400px;                   /* Set a fixed width for all buttons */
+            font-size: 18px;
+            background-color: #FFBE0B;      /* Change the button color if needed */
+            color: #071013;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #E85D04;   	/* Change the button hover color if needed */
+        }
+
+        .link {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+	<script type="module" src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"></script>
+    <div class="header">
+		<br>
+        <img src="GripMeter_WebHeader.png" alt="GripMeter" style="max-width: 100%; max-height: 100%;">
+    </div>
+    <div class="main-content">
+        <div class="button-box">
+            <h1>How to calibrate GripMeter device</h1>
+            <h2>Como calibar un dispositivo GripMeter</h2>
+            <p>Open the application in the normal way.<br /><span style="color: #808080;">Abrir aplicaci&oacute;n de forma normal.</span></p>
+            <p>1- Log in.<br />If it is the first time it will be necessary to select the email and accept the conditions of use of the application. <br />The next times the login will be automatic (until you log out).<br /><span style="color: #808080;">1- Hacer login. Si es la primera vez ser&aacute; necesario seleccionar el email y aceptar las condiciones de uso de la aplicaci&oacute;n. Las pr&oacute;ximas veces el login ser&aacute; autom&aacute;tico (hasta que se haga log out).</span></p>
+            <p>2- In the main menu enter the CONNECT option.<br /><span style="color: #808080;">2- En el men&uacute; principal entrar en la opci&oacute;n CONNECT.</span></p>
+            <p>3- Make sure that the phone's Bluetooth is activated. The first time the application will ask for location permissions, it is necessary to accept the request.<br />The device will be listed on the screen.<br /><span style="color: #808080;">3- Asegurarse que el bluetooth del tel&eacute;fono esta activado. La primera vez la applicaci&oacute;n pedir&agrave; permisos de localizaci&oacute;n, es necesario acceptar la petici&oacute;n. <br />El dispositivo saldr&aacute; listado en la pantalla.</span></p>
+            <p>4- Tap on the gear icon to enter the configuration menu.<br /><span style="color: #808080;">4- Hacer tap en el icono de engranaje para entrar en el men&uacute; de configuraci&oacute;n.</span></p>
+            
+            <img src="img/GripMeter_Calibration_1.png" alt="GripMeter" style="max-width: 70%; max-height: 70%;">
+
+
+            <p>5- Place the device for calibration.<br /><span style="color: #808080;">5- Colocar el dispositivo para la calibraci&oacute;n.</span></p>
+            <p>6- Before placing the calibration weight it is necessary to tap on "TARE CURRENT" to zero the device.<br /><span style="color: #808080;">6- Antes de colocar el peso de calibraci&oacute;n es necesario hacer tap en "TARE CURRENT" para poner a cero el dispositivo.</span></p>
+            <p>7- Make sure that the device shows 0 kg aprox on the display.<br /><span style="color: #808080;">7- Asegurarse que el dispositivo marca m&aacute;s o menos 0 kg en la pantalla.</span></p>
+            
+            <img src="img/GripMeter_Calibration_2.png" alt="GripMeter" style="max-width: 70%; max-height: 70%;">
+
+            <p>8- Place the known weight on the device. It is recommended to use a weight value similar to the one you intend to measure, never more than 150 kg.<br /><br /><span style="color: #808080;">8- Colocar el peso conocido en el dispositivo. Se recomienda usar un valor de peso similar al que se pretende medir nunca superior a 150 kg.</span></p>
+            <p>9- Enter the value of the known weight in the input box.<br /><span style="color: #808080;">9- Introducir el valor del peso conocido en el input box.</span></p>
+            <p>10- Tap the CALIBRATE button.<br /><span style="color: #808080;">10- Hacer tap en el bot&oacute;n CALIBRATE</span></p>
+            <p>11- Make sure that the device shows the correct weight on the display. If this is not the case repeat the whole calibration process.<br /><span style="color: #808080;">11- Asegurar que el dispositivo marca m&aacute;s o menos el peso conocido en la pantalla. Si no es el caso repetir todo el proceso de calibraci&oacute;n.</span></p>
+            
+            <img src="img/GripMeter_Calibration_3.png" alt="GripMeter" style="max-width: 70%; max-height: 70%;">
+            
+            <div class="link">
+                 <a href="https://gripmeter.github.io/">FLASHING GripMeter website</a>
+            </div>
+
+
+        </div>
+        <div class="link">
+            <a href="https://www.gripmeter.net/">GripMeter website</a>
+        </div>
+        <div class="link">
+            <a href="https://www.climbingnova.com">ClimbingNova website</a>
+        </div>
+    </div>
+</body>
+</html>
