@@ -8,7 +8,7 @@
         { "path": "ClimbingNovaFW_ino_20231130_bootloader.bin", "offset": 4096 },
         { "path": "ClimbingNovaFW_ino_20231130_partitions.bin", "offset": 32768 },
         { "path": "boot_app0.bin", "offset": 57344 },
-        { "path": "ClimbingNovaFW_ino_20231130.bin", "offset": 65536 },
+        { "path": "ClimbingNovaFW_ino_20231201.bin", "offset": 65536 },
         { "path": "ClimbingNovaFW_spiffs_20231130.bin", "offset": 6750208 }
       ]
     }
