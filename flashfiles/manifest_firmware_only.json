@@ -7,7 +7,7 @@
       "parts": [
         { "path": "ClimbingNovaFW_bootloader_20230102.bin", "offset": 4096 },
         { "path": "ClimbingNovaFW_partitions_20230102.bin", "offset": 32768 },
-        { "path": "boot_20230102", "offset": 57344 },
+        { "path": "boot_20230102.bin", "offset": 57344 },
         { "path": "ClimbingNovaFW_app_20230102.bin", "offset": 65536 }
       ]
     }
