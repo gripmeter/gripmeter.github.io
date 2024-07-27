@@ -3,47 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GripMeter Flashing</title> <!-- Set the web title here -->
+    <title>GripMeter Firmware Update</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        .header {
-            background-color: #F2F8FD; /* Header background color */
-            height: 100px;             /* Set the header height to 100px */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .main-content {
-            background-color: #F2F8FD; /* Main row background color */
-            padding: 100px;
-        }
-
-        .button-box {
-            background-color: #FCBF49; /* Main box background color (071013) */
-            padding: 10px;
-            border-radius: 20px;
-        }
-
-        .button-box-text {
-            font-size: 16px;
-            color: #000814; 				/* Text color (F2F8FD) */
-            margin-bottom: 10px;
-        }
-
-        .buttons {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e63946;			/* not used :) */
         }
-
-        .button {
+        .image-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #caf0f8; 			/* Light blue background */
+        }
+        .image-container img {
+            max-width: 100%;
+            max-height: 75px;
+            height: auto;
+        }
+		.content h1 {
+            margin-bottom: 20px;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: left;
+            padding: 20px;
+            background-color: #ade8f4; 		/* Darker blue background */
+            color: #000000; 				/* Black text */
+        }
+        .content p {
+            max-width: 800px;
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #023e8a; 		/* Cyan background */
+			color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 12px;
+        }
+        footer a {
+            color: #ffffff; 			/* White link color */
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: none;
+        }
+		.button {
             margin: 10px;
             padding: 15px 30px;
 			width: 400px;                   /* Set a fixed width for all buttons */
@@ -54,58 +66,57 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
-        .button:hover {
-            background-color: #E85D04;   	/* Change the button hover color if needed */
-        }
-
-        .link {
-            margin-top: 20px;
-            font-size: 14px;
-        }
     </style>
 </head>
 <body>
 	<script type="module" src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"></script>
-    <div class="header" style="padding-top: 50px;">
-        <img src="GripMeter_WebHeader.png" alt="GripMeter" style="max-width: 100%; max-height: 100%; padding: 75px 50px;">
+    <div class="image-container">
+        <img src="./img/GripMeter_logo.png" alt="GripMeter logo">
     </div>
-    <div class="main-content">
-        <div class="button-box">
-            <p class="button-box-text">Welcome to GripMeter Firmware Updater</p>
-			<p class="button-box-text">Please be carefull</p>
-			<br>
-			<br>
-			<p class="button-box-text">Select one of the options below.</p>
-			<p class="button-box-text">A window will appear to select the COM port of the device. Then select Install GripMeter</p>
-			<p class="button-box-text">If there is more than one device in the list, turn it off and on to identify which one it corresponds to.</p>
-			<br>
-			<p class="button-box-text">Option 1: Flash ONLY firmware</p>
-            <div class="buttons">
-				<esp-web-install-button manifest="flashfiles/manifest_firmware_only.json"></esp-web-install-button>
-            </div>
-			<br>
-			<br>
-			<p class="button-box-text">Option 2: Flash firmware and calibration</p>
-            <div class="buttons">
-				<esp-web-install-button manifest="flashfiles/manifest_all.json"></esp-web-install-button>
-            </div>
-			<br>
-			<br>
-			<br>
-			<div class="link">
-				<a href="https://gripmeter.github.io/gripmeter_calibration.html">Calibratin instrucctions for GripMeter device</a>
-			</div>
-			<br>
-			<br>
-			<br>
+    <div class="content">
+        <h1>Important Information About Firmware Updates</h1>
+        <p>Welcome to our firmware update platform. This website is designed to facilitate the updating of firmware for your GripMeter device. Please read the following instructions carefully to ensure a smooth and successful update process.</p>
+		
+        <h2>Flashing Device Firmware</h2>
+		<p>Flashing firmware is a critical operation that is irreversible. It is imperative that you proceed with caution and follow the instructions meticulously. During the flashing process, ensure that your device remains connected at all times. Any interruption or disconnection can result in an incomplete or corrupted firmware update, which may render the device inoperable.</p>
+		
+		<h2>Installation Process</h2>
+		<p>When you tap on the "INSTALL" button, a window will appear requesting you to select a COM port. This step is crucial as the correct COM port must be selected to communicate with your device.</p>
+		
+		<p>If multiple COM ports are listed and you are uncertain which one to choose, you can identify the correct port by performing the following steps:</p>
+		
+		<ol>
+            <li>Connect your device to the computer.</li>
+            <li>Observe the list of available COM ports.</li>
+            <li>Disconnect your device and note which COM port disappears from the list.</li>
+            <li>Reconnect your device and the reappearing COM port will be the correct one to select.</li>
+        </ol>
+		
+		<h2>Firmware Update Options</h2>
+		<p>There are two main firmware update option</p>
+		
+		<h3>Flash Application Only</h3>
+		<p>This option will update only the application part of the firmware.</p>
+		
+		<div class="buttons">
+			<esp-web-install-button manifest="flashfiles/manifest_firmware_only.json"></esp-web-install-button>
+		</div>
+		
+		<h3>Flash Firmware and Calibration</h3>
+		<p>This option will update both the application and the calibration data.</p>
+		<p>Please note that choosing this option will necessitate a recalibration of your device after the update is complete. It is essential to have the necessary tools and instructions for recalibration before proceeding</p>
+		
+		<p>Here you can find <a href="https://gripmeter.github.io/gripmeter_calibration.html" target="_blank">calibration instructions</a> if required.</p>
+		
+		<div class="buttons">
+			<esp-web-install-button manifest="flashfiles/manifest_firmware_only.json"></esp-web-install-button>
         </div>
-        <div class="link">
-            <a href="https://www.gripmeter.net/">GripMeter website</a>
-        </div>
-        <div class="link">
-            <a href="https://www.climbingnova.com">ClimbingNova website</a>
-        </div>
+		
+		<p>By adhering to these guidelines and instructions, you can ensure that your GripMeter device is updated safely and efficiently. If you have any further questions or require assistance, please refer to our support documentation or contact us.</p>
+			
     </div>
+    <footer>
+        <p>Visit <a href="https://gripmeter.net" target="_blank">GripMeter.net</a> for more information</p>
+    </footer>
 </body>
 </html>
