@@ -5,10 +5,10 @@
       "chipFamily": "ESP32",
       "improv": false,
       "parts": [
-        { "path": "ClimbingNovaFW_bootloader_20240109.bin", "offset": 4096 },
-        { "path": "ClimbingNovaFW_partitions_20240109.bin", "offset": 32768 },
-        { "path": "boot_20240109.bin", "offset": 57344 },
-        { "path": "ClimbingNovaFW_app_20240109.bin", "offset": 65536 }
+        { "path": "GripMeterFW_2c_bootloader.bin", "offset": 4096 },
+        { "path": "GripMeterFW_2c_partitions.bin", "offset": 32768 },
+        { "path": "boot_app.bin", "offset": 57344 },
+        { "path": "boot_app.bin", "offset": 65536 }
       ]
     }
   ]
