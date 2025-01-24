@@ -5,7 +5,7 @@
       "chipFamily": "ESP32",
       "improv": false,
       "parts": [
-        { "path": "ClimbingNova_full_20240109.bin", "offset": 0 }
+        { "path": "GripMeterFW_all_blocks.bin", "offset": 0 }
       ]
     }
   ]
