@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GripMeter Dev Firmware</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #DA3125;
+            font-family: Arial, sans-serif;
+        }
+
+        .centered-rectangle {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px 40px;
+            text-align: center;
+			background-color: #8A0000;			
+            width: 300px;
+        }
+
+        .centered-rectangle h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+        }
+
+        .centered-rectangle p {
+            margin: 20px 0;
+            font-size: 14px;
+            color: white;
+        }
+
+        .centered-rectangle button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .centered-rectangle button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+	<script type="module" src="https://unpkg.com/esp-web-tools/dist/web/install-button.js?module"></script>
+    <div class="centered-rectangle">
+		<div class="image-container">
+			<img src="../img/GripMeter_logo.png" alt="GripMeter logo" width=300>
+		</div>
+        <h1>Development firmware</h1>
+        <p>Do NOT use this firmware unless you know what are you doing.</p>
+        <div class="buttons">
+			<esp-web-install-button manifest="/manifest_dev.json"></esp-web-install-button>
+		</div>
+    </div>
+</body>
+</html>

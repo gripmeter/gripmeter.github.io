@@ -1,0 +1,12 @@
+{
+  "name": "GripMeter",
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "improv": false,
+      "parts": [
+        { "path": "dev_20250124.bin", "offset": 0 }
+      ]
+    }
+  ]
+}
